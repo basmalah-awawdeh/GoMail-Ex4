@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 const labels = [];
 
 export const getLabels = (req, res) => {
-  res.status(200).json(labels);
+  res.status(200).json(labels.filter(l => l.owner === req.userId));
 };
 
 export const createLabel = (req, res) => {
@@ -16,7 +16,7 @@ export const createLabel = (req, res) => {
   }
 
   //creatimg and store the new label
-  const label = { id: uuidv4(), name };
+  const label = { id: uuidv4(), name, owner: req.userId };
   labels.push(label);
 
   //responding with 201 created and the new label's location
@@ -39,7 +39,7 @@ export const updateLabel = (req, res) => {
   const label = labels.find(l => l.id === req.params.id);
 
   //if the label is not exist return 404 not found
-  if (!label){
+  if (!label || label.owner !== req.userId){
     return res.status(404).json({ error: 'Label not found' });
   }
 
@@ -55,7 +55,7 @@ export const deleteLabel = (req, res) => {
   const index = labels.findIndex(l => l.id === req.params.id);
 
   //if the label is not exist, returns 404 not found
-  if (index === -1){
+  if (index === -1 || labels[index].owner !== req.userId) {
     return res.status(404).json({ error: 'Label not found' });
   }
 
