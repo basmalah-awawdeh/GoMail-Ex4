@@ -1,0 +1,17 @@
+.label-btn {
+  color: #226;
+  border: none;
+  border-radius: 18px;
+  padding: 10px 30px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  background: #cafc43; /* light mode */
+}
+
+.dark-mode .label-btn {
+  background: #353b12;  /* a soft olive green for dark mode, or pick another! */
+  color: #cafc43;
+}
