@@ -1,0 +1,76 @@
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+}
+
+.login-box {
+  background: white;
+  padding: 2rem;
+  width: 400px;
+  box-shadow: 0 2px 10px rgba(44, 93, 98, 0.2); 
+  border-radius: 8px;
+  text-align: center;
+  color: #2c5d62; 
+}
+
+.login-box h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #2c5d62;
+}
+
+.login-box input {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #2c5d62;
+  border-radius: 4px;
+  color: #2c5d62;
+}
+
+.login-box input::placeholder {
+  color: #2c5d62;
+  opacity: 0.6;
+}
+
+.login-box button {
+  background-color: #b4e719;
+  color: #2c5d62;
+  border: none;
+  padding: 10px 16px;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background-color: #b4e719;
+}
+
+.gmail-logo {
+  width: 180px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.register-link {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #2c5d62;
+}
+
+.register-link a {
+  color: #b4e719;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  text-decoration: underline;
+}
