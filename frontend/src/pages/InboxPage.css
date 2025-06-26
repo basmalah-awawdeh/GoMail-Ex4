@@ -1,0 +1,493 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f6f8fc;
+  color: #2c5d62;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.profile-menu {
+  position: relative;
+}
+
+.profile-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #c2185b;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-letter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 2px solid #2c6b73;
+  border-radius: 24px;
+  overflow: hidden;
+  width: 400px; /* wider search box */
+  height: 42px;
+  background-color: white;
+}
+
+
+.search-bar input {
+  border: none;           /* remove default input border */
+  outline: none;          /* remove focus outline */
+  box-shadow: none;       /* remove any box shadow */
+  background-color: transparent; /* keep background transparent */
+  padding: 10px 16px;
+  font-size: 16px;
+}
+
+.search-bar input:focus {
+  outline: none;
+  box-shadow: inset 0 0 4px 2px rgba(44, 107, 115, 0.3); /* subtle inner glow */
+}
+
+
+.search-button {
+  border: none;
+  background: transparent;   /* no red background */
+  padding: 0 16px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #2c6b73;           /* same color as border */
+}
+
+.search-button:hover {
+  color: #144a52;
+}
+
+
+
+body.dark-mode .search-bar {
+  background-color: #2c2c2c;
+  border-color: #555;
+}
+
+body.dark-mode .search-bar input {
+  color: #e0e0e0;
+}
+
+body.dark-mode .search-button {
+  color: #e0e0e0;
+}
+
+body.dark-mode .search-button:hover {
+  color: #a0d8dc;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+  min-width: 140px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+.dropdown-username {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.dropdown button {
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  width: 100%;
+  padding: 6px 0;
+  cursor: pointer;
+}
+
+.dropdown button:hover {
+  background-color: #444;
+}
+
+body.dark-mode .dropdown {
+  background-color: #222;
+  color: #ddd;
+}
+
+
+.gmail-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.gomail-logo {
+  width: 40px;     /* Increase from 32px */
+  height: 40px;
+  margin-right: 8px;
+  object-fit: contain;  /* Ensures it scales nicely */
+}
+
+
+.gomail-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #444;
+}
+
+body.dark-mode .gomail-title {
+  color: #e0e0e0;
+}
+
+
+.top-bar {
+  background-color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #2c5d62;
+  box-shadow: 0 1px 4px rgba(44, 93, 98, 0.1);
+}
+
+.top-bar input[type="text"] {
+  flex-grow: 1;
+  margin: 0 1rem;
+  padding: 0.5rem;
+  border: 1px solid #2c5d62;
+  border-radius: 24px;
+  color: #2c5d62;
+}
+
+.top-bar input[type="text"]::placeholder {
+  color: #2c5d62;
+  opacity: 0.6;
+}
+
+.top-bar button {
+  background-color: #d93025;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: #f1f3f4;
+  padding: 1rem;
+  border-right: 1px solid #2c5d62;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #2c5d62;
+}
+
+.sidebar button {
+  background-color: #b4e719;
+  color: #2c5d62;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border-radius: 16px;
+  color: #2c5d62;
+}
+
+.sidebar li:hover {
+  background-color: #e8f0fe;
+}
+
+.mail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mail-date {
+  font-size: 12px;
+  color: gray;
+  margin-left: 1rem;
+  white-space: nowrap;
+}
+
+.mail-line {
+  font-size: 14px;
+  color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+
+/* === Default (Light Mode) === */
+.mail-from {
+  font-weight: 600;
+  color: #222;
+}
+
+.mail-subject {
+  font-weight: 600;
+  color: #333;
+  margin-left: 0.5rem;
+}
+
+.mail-snippet {
+  font-weight: 400;
+  color: #777;
+  margin-left: 0.5rem;
+}
+
+body.dark-mode .mail-from {
+  color: #ddd;
+}
+
+body.dark-mode .mail-subject {
+  color: #ccc;
+}
+
+body.dark-mode .mail-snippet {
+  color: #888;
+}
+
+body.dark-mode .mail-date {
+  color: #aaa;
+}
+
+
+.mail-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.mail-left-tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.mail-checkbox {
+  cursor: pointer;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #999;
+  padding: 4px;
+}
+
+.icon-button:hover {
+  color: #222;
+}
+
+body.dark-mode .icon-button {
+  color: #aaa;
+}
+
+body.dark-mode .icon-button:hover {
+  color: #fff;
+}
+
+
+
+.mail-content {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  color: #2c5d62;
+}
+
+.mail-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mail-list li {
+  background-color: white;
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(44, 93, 98, 0.15);
+  transition: background-color 0.2s ease;
+  color: #2c5d62;
+}
+
+.mail-list li:hover {
+  background-color: #f1f3f4;
+}
+
+.mail-view {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(44, 93, 98, 0.15);
+  color: #2c5d62;
+}
+
+.mail-view h2 {
+  margin-top: 0;
+  color: #2c5d62;
+}
+
+.mail-view button {
+  background-color: #e8eaed;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #2c5d62;
+}
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .top-bar {
+  background-color: #1f1f1f;
+  border-color: #444;
+  box-shadow: 0 1px 4px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .top-bar input[type="text"] {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+body.dark-mode .sidebar {
+  background-color: #1f1f1f;
+  border-color: #444;
+}
+
+body.dark-mode .sidebar li:hover {
+  background-color: #333;
+}
+
+body.dark-mode .sidebar button {
+  background-color: #3e7e86;
+  color: #fff;
+}
+
+body.dark-mode .mail-list li,
+body.dark-mode .mail-view {
+  background-color: #1f1f1f;
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
+  color: #e0e0e0;
+}
+
+body.dark-mode .mail-view button {
+  background-color: #333;
+  color: #fff;
+}
+.compose-form input,
+.compose-form textarea {
+  display: block;
+  margin: 0.5rem 0;
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.styled-button {
+  background-color: #b4e719;
+  color: #2c5d62;
+  border: none;
+  padding: 8px 16px;
+  margin: 4px 8px 0 0;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.styled-button:hover {
+  background-color: #a6cc17;
+}
+
+.styled-button:focus,
+.styled-button:active {
+  outline: none;
+  transform: scale(0.98);
+  box-shadow: 0 0 0 2px rgba(180, 231, 25, 0.5);
+}
+/* Dark Mode */
+body.dark-mode .styled-button {
+  background-color: #2c5d62;
+  color: #ffffff; /* 👈 white text */
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .styled-button:hover {
+  background-color: #2c5d62;
+  color: #ffffff; /* 👈 keep white on hover too */
+}
+
+body.dark-mode .styled-button:focus,
+body.dark-mode .styled-button:active {
+  box-shadow: 0 0 0 2px rgba(195, 255, 74, 0.2);
+}
+
