@@ -1,0 +1,34 @@
+version: "3"
+services:
+  cpp-server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./data:/app/data
+    stdin_open: true
+    tty: true
+
+  node-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    ports:
+      - "3003:3003"
+    environment:
+      - CPP_SERVER_PORT=12345
+    volumes:
+      - ./backend/uploads:/app/uploads   
+    stdin_open: true
+    tty: true
+    depends_on:
+      - cpp-server
+
+  react-web:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - node-api
