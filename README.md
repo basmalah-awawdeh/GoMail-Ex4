@@ -176,5 +176,4 @@ The theme updates instantly.
 Click your profile picture and then select Logout to exit your session.
 ```
 
-*****************************************************LOGOUT PICTURE**************************************
 ![Image](https://github.com/user-attachments/assets/472f71aa-3a86-4cae-b3b3-b99d7b641c58)
