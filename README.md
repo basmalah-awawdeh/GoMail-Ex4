@@ -30,8 +30,9 @@ This will build and start the Node.js API container, the C++ server container an
 
 ### Open the React-Web
 
+```bash
 http://localhost:5173
-
+```
 ---
 
 ### Register a New User
